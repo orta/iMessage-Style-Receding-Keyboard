@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		600258C7144AC721002E4C63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600258C6144AC721002E4C63 /* UIKit.framework */; };
+		600258C9144AC721002E4C63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600258C8144AC721002E4C63 /* Foundation.framework */; };
+		600258CB144AC721002E4C63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600258CA144AC721002E4C63 /* CoreGraphics.framework */; };
+		600258D1144AC721002E4C63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 600258CF144AC721002E4C63 /* InfoPlist.strings */; };
+		600258D3144AC721002E4C63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 600258D2144AC721002E4C63 /* main.m */; };
+		600258D7144AC721002E4C63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 600258D6144AC721002E4C63 /* AppDelegate.m */; };
+		600258DA144AC721002E4C63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600258D9144AC721002E4C63 /* ViewController.m */; };
+		600258DD144AC721002E4C63 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600258DB144AC721002E4C63 /* ViewController.xib */; };
+		600258E8144AC8B6002E4C63 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600258E7144AC8B6002E4C63 /* bg.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		600258C2144AC721002E4C63 /* iMessageKeyboardEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageKeyboardEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		600258C6144AC721002E4C63 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		600258C8144AC721002E4C63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		600258CA144AC721002E4C63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		600258CE144AC721002E4C63 /* iMessageKeyboardEffect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iMessageKeyboardEffect-Info.plist"; sourceTree = "<group>"; };
+		600258D0144AC721002E4C63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		600258D2144AC721002E4C63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		600258D4144AC721002E4C63 /* iMessageKeyboardEffect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iMessageKeyboardEffect-Prefix.pch"; sourceTree = "<group>"; };
+		600258D5144AC721002E4C63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		600258D6144AC721002E4C63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		600258D8144AC721002E4C63 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		600258D9144AC721002E4C63 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		600258DC144AC721002E4C63 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		600258E7144AC8B6002E4C63 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		600258BF144AC721002E4C63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600258C7144AC721002E4C63 /* UIKit.framework in Frameworks */,
+				600258C9144AC721002E4C63 /* Foundation.framework in Frameworks */,
+				600258CB144AC721002E4C63 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		600258B7144AC721002E4C63 = {
+			isa = PBXGroup;
+			children = (
+				600258CC144AC721002E4C63 /* iMessageKeyboardEffect */,
+				600258C5144AC721002E4C63 /* Frameworks */,
+				600258C3144AC721002E4C63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		600258C3144AC721002E4C63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				600258C2144AC721002E4C63 /* iMessageKeyboardEffect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		600258C5144AC721002E4C63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				600258C6144AC721002E4C63 /* UIKit.framework */,
+				600258C8144AC721002E4C63 /* Foundation.framework */,
+				600258CA144AC721002E4C63 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		600258CC144AC721002E4C63 /* iMessageKeyboardEffect */ = {
+			isa = PBXGroup;
+			children = (
+				600258D5144AC721002E4C63 /* AppDelegate.h */,
+				600258D6144AC721002E4C63 /* AppDelegate.m */,
+				600258D8144AC721002E4C63 /* ViewController.h */,
+				600258D9144AC721002E4C63 /* ViewController.m */,
+				600258DB144AC721002E4C63 /* ViewController.xib */,
+				600258CD144AC721002E4C63 /* Supporting Files */,
+			);
+			path = iMessageKeyboardEffect;
+			sourceTree = "<group>";
+		};
+		600258CD144AC721002E4C63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				600258E7144AC8B6002E4C63 /* bg.jpg */,
+				600258CE144AC721002E4C63 /* iMessageKeyboardEffect-Info.plist */,
+				600258CF144AC721002E4C63 /* InfoPlist.strings */,
+				600258D2144AC721002E4C63 /* main.m */,
+				600258D4144AC721002E4C63 /* iMessageKeyboardEffect-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		600258C1144AC721002E4C63 /* iMessageKeyboardEffect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600258E0144AC721002E4C63 /* Build configuration list for PBXNativeTarget "iMessageKeyboardEffect" */;
+			buildPhases = (
+				600258BE144AC721002E4C63 /* Sources */,
+				600258BF144AC721002E4C63 /* Frameworks */,
+				600258C0144AC721002E4C63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iMessageKeyboardEffect;
+			productName = iMessageKeyboardEffect;
+			productReference = 600258C2144AC721002E4C63 /* iMessageKeyboardEffect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		600258B9144AC721002E4C63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = ortatherox.com;
+			};
+			buildConfigurationList = 600258BC144AC721002E4C63 /* Build configuration list for PBXProject "iMessageKeyboardEffect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 600258B7144AC721002E4C63;
+			productRefGroup = 600258C3144AC721002E4C63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				600258C1144AC721002E4C63 /* iMessageKeyboardEffect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		600258C0144AC721002E4C63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600258D1144AC721002E4C63 /* InfoPlist.strings in Resources */,
+				600258DD144AC721002E4C63 /* ViewController.xib in Resources */,
+				600258E8144AC8B6002E4C63 /* bg.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		600258BE144AC721002E4C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600258D3144AC721002E4C63 /* main.m in Sources */,
+				600258D7144AC721002E4C63 /* AppDelegate.m in Sources */,
+				600258DA144AC721002E4C63 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		600258CF144AC721002E4C63 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				600258D0144AC721002E4C63 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		600258DB144AC721002E4C63 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				600258DC144AC721002E4C63 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		600258DE144AC721002E4C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		600258DF144AC721002E4C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		600258E1144AC721002E4C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iMessageKeyboardEffect/iMessageKeyboardEffect-Prefix.pch";
+				INFOPLIST_FILE = "iMessageKeyboardEffect/iMessageKeyboardEffect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		600258E2144AC721002E4C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iMessageKeyboardEffect/iMessageKeyboardEffect-Prefix.pch";
+				INFOPLIST_FILE = "iMessageKeyboardEffect/iMessageKeyboardEffect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		600258BC144AC721002E4C63 /* Build configuration list for PBXProject "iMessageKeyboardEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600258DE144AC721002E4C63 /* Debug */,
+				600258DF144AC721002E4C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600258E0144AC721002E4C63 /* Build configuration list for PBXNativeTarget "iMessageKeyboardEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600258E1144AC721002E4C63 /* Debug */,
+				600258E2144AC721002E4C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 600258B9144AC721002E4C63 /* Project object */;
+}
