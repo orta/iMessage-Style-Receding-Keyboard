@@ -59,21 +59,17 @@
 }
 
 -(void)panGesture:(UIPanGestureRecognizer *)gestureRecognizer {
+    CGPoint translation = [gestureRecognizer translationInView:[self view]];  
+    CGPoint velocity = [gestureRecognizer velocityInView:self.view];
+    
     if(gestureRecognizer.state == UIGestureRecognizerStateBegan){
         originalKeyboardY = keyboard.frame.origin.y;
     }
     
-    CGPoint translation = [gestureRecognizer translationInView:[self view]];  
-    
     if(gestureRecognizer.state == UIGestureRecognizerStateEnded){    
-        if (translation.y > ((keyboard.frame.size.height / 3) * 2) ) {
-            // if the keyboard is over 2/3rds of the way down, 
-            // hide it offscreen
+        if (velocity.y > 0) {
             [self animateKeyboardOffscreen];
-
         }else{
-            // if the keyboard is in the top third, move 
-            // back up to the top.
             [self animateKeyboardReturnToOriginalPosition];
         }
         return;
