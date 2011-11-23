@@ -13,6 +13,8 @@
 - (void)animateKeyboardOffscreen;
 @end
 
+static float FingerGrabHandleSize = 20.0f;
+
 @implementation ViewController
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,7 +61,7 @@
 }
 
 -(void)panGesture:(UIPanGestureRecognizer *)gestureRecognizer {
-    CGPoint translation = [gestureRecognizer translationInView:[self view]];  
+    CGPoint location = [gestureRecognizer locationInView:[self view]];  
     CGPoint velocity = [gestureRecognizer velocityInView:self.view];
     
     if(gestureRecognizer.state == UIGestureRecognizerStateBegan){
@@ -74,11 +76,14 @@
         }
         return;
     }
+        
+    CGFloat spaceAboveKeyboard = self.view.bounds.size.height - (keyboard.frame.size.height + textField.frame.size.height) + FingerGrabHandleSize;
+    if (location.y < spaceAboveKeyboard) {
+        return;
+    }
     
-    // Drag vertically with finger. Being sure not to
-    // go above the original point.
     CGRect newFrame = keyboard.frame;
-    CGFloat newY = originalKeyboardY + translation.y;
+    CGFloat newY = originalKeyboardY + (location.y - spaceAboveKeyboard);
     newY = MAX(newY, originalKeyboardY);
     newFrame.origin.y = newY;
     [keyboard setFrame: newFrame];

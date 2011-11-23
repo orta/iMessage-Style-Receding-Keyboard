@@ -12,6 +12,7 @@
     UIView* keyboard;
     UITextField* textField;
     int originalKeyboardY;
+    int originalLocation;
 }
 
 @end
