@@ -10,6 +10,7 @@
 
 @interface ViewController (private)
 - (void)animateKeyboardReturnToOriginalPosition;
+- (void)animateKeyboardOffscreen;
 @end
 
 @implementation ViewController
@@ -68,17 +69,12 @@
         if (translation.y > ((keyboard.frame.size.height / 3) * 2) ) {
             // if the keyboard is over 2/3rds of the way down, 
             // hide it offscreen
-            [self animateKeyboardReturnToOriginalPosition];
+            [self animateKeyboardOffscreen];
 
         }else{
             // if the keyboard is in the top third, move 
             // back up to the top.
-            
-            [UIView beginAnimations:nil context:NULL];
-            CGRect newFrame = keyboard.frame;
-            newFrame.origin.y = originalKeyboardY;
-            [keyboard setFrame: newFrame];
-            [UIView commitAnimations];
+            [self animateKeyboardReturnToOriginalPosition];
         }
         return;
     }
@@ -92,7 +88,7 @@
     [keyboard setFrame: newFrame];
 }
 
-- (void) animateKeyboardReturnToOriginalPosition {
+- (void)animateKeyboardOffscreen {
     [UIView animateWithDuration:0.3
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
@@ -106,6 +102,14 @@
                          keyboard.hidden = YES;
                          [textField resignFirstResponder];
                      }];
+}
+
+- (void)animateKeyboardReturnToOriginalPosition {
+    [UIView beginAnimations:nil context:NULL];
+    CGRect newFrame = keyboard.frame;
+    newFrame.origin.y = originalKeyboardY;
+    [keyboard setFrame: newFrame];
+    [UIView commitAnimations];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
