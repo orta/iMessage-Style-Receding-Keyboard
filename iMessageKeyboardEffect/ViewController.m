@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+@interface ViewController (private)
+- (void)animateKeyboardReturnToOriginalPosition;
+@end
+
 @implementation ViewController
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,24 +65,11 @@
     CGPoint translation = [gestureRecognizer translationInView:[self view]];  
     
     if(gestureRecognizer.state == UIGestureRecognizerStateEnded){    
-        
         if (translation.y > ((keyboard.frame.size.height / 3) * 2) ) {
             // if the keyboard is over 2/3rds of the way down, 
             // hide it offscreen
-            
-            [UIView animateWithDuration:0.3
-                                  delay:0
-                                options:UIViewAnimationOptionCurveEaseOut
-                             animations:^{
-                                 CGRect newFrame = keyboard.frame;
-                                 newFrame.origin.y = keyboard.window.frame.size.height;
-                                 [keyboard setFrame: newFrame];
-                             }
-             
-                             completion:^(BOOL finished){
-                                 keyboard.hidden = YES;
-                                 [textField resignFirstResponder];
-                             }];
+            [self animateKeyboardReturnToOriginalPosition];
+
         }else{
             // if the keyboard is in the top third, move 
             // back up to the top.
@@ -89,7 +80,6 @@
             [keyboard setFrame: newFrame];
             [UIView commitAnimations];
         }
-        
         return;
     }
     
@@ -100,6 +90,22 @@
     newY = MAX(newY, originalKeyboardY);
     newFrame.origin.y = newY;
     [keyboard setFrame: newFrame];
+}
+
+- (void) animateKeyboardReturnToOriginalPosition {
+    [UIView animateWithDuration:0.3
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         CGRect newFrame = keyboard.frame;
+                         newFrame.origin.y = keyboard.window.frame.size.height;
+                         [keyboard setFrame: newFrame];
+                     }
+     
+                     completion:^(BOOL finished){
+                         keyboard.hidden = YES;
+                         [textField resignFirstResponder];
+                     }];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
