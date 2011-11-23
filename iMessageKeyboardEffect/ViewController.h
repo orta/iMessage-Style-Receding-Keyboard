@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>{
-  UIView* keyboard;
-  IBOutlet UITextField* textField;
-  int originalKeyboardY;
+    UIView* keyboard;
+    UITextField* textField;
+    int originalKeyboardY;
 }
 
 @end
