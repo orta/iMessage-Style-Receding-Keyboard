@@ -1,3 +1,5 @@
+Discontinued, you should look at https://github.com/danielamitay/DAKeyboardControl which does it much better nowadays.
+
 iMessage Style Receding Keyboard
 ======================================================================
 
