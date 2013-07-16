@@ -8,18 +8,18 @@
 
 #import "ViewController.h"
 
+#define kFingerGrabHandleHeight     (20.0f)
+
 @interface ViewController (private)
 - (void)animateKeyboardReturnToOriginalPosition;
 - (void)animateKeyboardOffscreen;
 @end
 
-static float FingerGrabHandleSize = 20.0f;
-
 @implementation ViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-        
+    
     // always know which keyboard is selected
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textfieldWasSelected:) name:UITextFieldTextDidBeginEditingNotification object:nil];
     
@@ -32,6 +32,8 @@ static float FingerGrabHandleSize = 20.0f;
     [self.view addGestureRecognizer:panRecognizer];
 }
 
+#pragma mark - Notification Handler
+
 - (void)textfieldWasSelected:(NSNotification *)notification {
     textField = notification.object;
 }
@@ -42,42 +44,45 @@ static float FingerGrabHandleSize = 20.0f;
     keyboard.hidden = NO;
 }
 
-
 - (void)keyboardDidShow:(NSNotification *)notification {
-    if(keyboard) return;
+    if (keyboard)
+        return;
     
-    //Because we cant get access to the UIKeyboard throught the SDK we will just use UIView. 
+    //Because we cant get access to the UIKeyboard throught the SDK we will just use UIView.
     //UIKeyboard is a subclass of UIView anyways
     //see discussion http://www.iphonedevsdk.com/forum/iphone-sdk-development/6573-howto-customize-uikeyboard.html
     
     UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-    for(int i = 0; i < [tempWindow.subviews count]; i++) {
+    for (int i = 0; i < [tempWindow.subviews count]; i++) {
         UIView *possibleKeyboard = [tempWindow.subviews objectAtIndex:i];
-        if([[possibleKeyboard description] hasPrefix:@"<UIPeripheralHostView"] == YES){
+        if ([possibleKeyboard isKindOfClass:NSClassFromString(@"UIPeripheralHostView")]) {
             keyboard = possibleKeyboard;
             return;
         }
     }
 }
 
--(void)panGesture:(UIPanGestureRecognizer *)gestureRecognizer {
-    CGPoint location = [gestureRecognizer locationInView:[self view]];  
+#pragma mark - Gesture Handler
+
+- (void)panGesture:(UIPanGestureRecognizer *)gestureRecognizer {
+    CGPoint location = [gestureRecognizer locationInView:[self view]];
     CGPoint velocity = [gestureRecognizer velocityInView:self.view];
     
-    if(gestureRecognizer.state == UIGestureRecognizerStateBegan){
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         originalKeyboardY = keyboard.frame.origin.y;
     }
     
-    if(gestureRecognizer.state == UIGestureRecognizerStateEnded){    
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         if (velocity.y > 0) {
             [self animateKeyboardOffscreen];
-        }else{
+        } else {
             [self animateKeyboardReturnToOriginalPosition];
         }
+        
         return;
     }
-        
-    CGFloat spaceAboveKeyboard = self.view.bounds.size.height - (keyboard.frame.size.height + textField.frame.size.height) + FingerGrabHandleSize;
+    
+    CGFloat spaceAboveKeyboard = CGRectGetHeight(self.view.bounds) - (CGRectGetHeight(keyboard.frame) + CGRectGetHeight(textField.frame)) + kFingerGrabHandleHeight;
     if (location.y < spaceAboveKeyboard) {
         return;
     }
@@ -88,6 +93,8 @@ static float FingerGrabHandleSize = 20.0f;
     newFrame.origin.y = newY;
     [keyboard setFrame: newFrame];
 }
+
+#pragma mark -
 
 - (void)animateKeyboardOffscreen {
     [UIView animateWithDuration:0.3
