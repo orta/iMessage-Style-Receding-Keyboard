@@ -16,6 +16,9 @@
 		600258DA144AC721002E4C63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600258D9144AC721002E4C63 /* ViewController.m */; };
 		600258DD144AC721002E4C63 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600258DB144AC721002E4C63 /* ViewController.xib */; };
 		600258E8144AC8B6002E4C63 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600258E7144AC8B6002E4C63 /* bg.jpg */; };
+		7607AAAE1795373500529F0D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7607AAAC1795373500529F0D /* Default.png */; };
+		7607AAAF1795373500529F0D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7607AAAD1795373500529F0D /* Default@2x.png */; };
+		7607AAB11795378F00529F0D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7607AAB01795378F00529F0D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		600258D9144AC721002E4C63 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		600258DC144AC721002E4C63 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		600258E7144AC8B6002E4C63 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		7607AAAC1795373500529F0D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7607AAAD1795373500529F0D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7607AAB01795378F00529F0D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 		600258CD144AC721002E4C63 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7607AAB01795378F00529F0D /* Default-568h@2x.png */,
+				7607AAAC1795373500529F0D /* Default.png */,
+				7607AAAD1795373500529F0D /* Default@2x.png */,
 				600258E7144AC8B6002E4C63 /* bg.jpg */,
 				600258CE144AC721002E4C63 /* iMessageKeyboardEffect-Info.plist */,
 				600258CF144AC721002E4C63 /* InfoPlist.strings */,
@@ -155,6 +164,9 @@
 				600258D1144AC721002E4C63 /* InfoPlist.strings in Resources */,
 				600258DD144AC721002E4C63 /* ViewController.xib in Resources */,
 				600258E8144AC8B6002E4C63 /* bg.jpg in Resources */,
+				7607AAAE1795373500529F0D /* Default.png in Resources */,
+				7607AAAF1795373500529F0D /* Default@2x.png in Resources */,
+				7607AAB11795378F00529F0D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
